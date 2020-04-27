@@ -1,0 +1,41 @@
+
+.content {
+    grid-area: c;
+    background-color: deepskyblue;
+    display: grid;
+    grid-template-areas:
+            't'
+            'u'
+            'p';
+    grid-template-rows: 3fr;
+    grid-template-columns: 1fr;
+    grid-gap: 5px;
+
+}
+.top {
+    grid-area: t;
+}
+.top img {
+    width: 600px;
+}
+.user {
+    grid-area: u;
+    display: grid;
+    grid-template-areas:
+            'a d';
+    grid-template-rows: 5fr 1fr;
+    grid-template-columns: 2fr 5fr;
+    grid-gap: 5px;
+}
+.avatar {
+    grid-area: a;
+}
+.description {
+    grid-area: d;
+}
+.avatar img {
+    width: 100px;
+}
+.posts {
+    grid-area: p;
+}
