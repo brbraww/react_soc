@@ -12,3 +12,7 @@ body {
   grid-template-columns: 1fr 10fr;
   grid-gap: 5px;
 }
+
+.app-wrapper-content {
+  background-color: deepskyblue;
+}

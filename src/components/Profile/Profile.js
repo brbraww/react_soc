@@ -6,7 +6,7 @@ const Profile = () => {
     return (
         <div className={ classes.content }>
             <div className={ classes.top }>
-                <img src="https://lh3.googleusercontent.com/proxy/eQgG5MMbV0zwfEYm6XVf1yDKUmxqfFJagWMGUZqcfTIPdh8AW7zNdS04PVfRMFIlgLvXuAJGiaNPJP4EQKJJwjZKDJvR24jJDxCtKl_MzdCeu90GgaRQRlOzbJF_2-aHCqICpkA" alt=""/>
+                <img src="http://alp.org.ua/wp-content/uploads/2012/07/artleo.com_21593.jpg" alt="top"/>
             </div>
 
             <div className={ classes.user }>

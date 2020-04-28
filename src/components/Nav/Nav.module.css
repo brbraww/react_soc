@@ -1,4 +1,30 @@
 .nav {
     grid-area: n;
-    background-color: #dfdfdf;
+    background-color: #000;
+}
+
+a {
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 15px 25px;
+    padding: 15px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    transition: 0.4s ease-in-out;
+
+
+}
+a {
+    color: #E7E5DD;
+    background: url(https://html5book.ru/wp-content/uploads/2015/01/borger-grey.png) repeat-x;
+    border-bottom: 1px solid  #bfc1ad;
+    border-left: 1px solid  #bfc1ad;
+    border-right:  1px solid  #bfc1ad;
+}
+
+a.active_link {
+    color: gold;
 }
