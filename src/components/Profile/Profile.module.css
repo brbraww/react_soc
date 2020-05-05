@@ -1,4 +1,3 @@
-
 .content {
     grid-area: c;
     display: grid;
@@ -11,30 +10,7 @@
     grid-gap: 5px;
 
 }
-.top {
-    grid-area: t;
-}
-.top img {
-    width: 1100px;
-}
-.user {
-    grid-area: u;
-    display: grid;
-    grid-template-areas:
-            'a d';
-    grid-template-rows: 5fr 1fr;
-    grid-template-columns: 2fr 5fr;
-    grid-gap: 5px;
-}
-.avatar {
-    grid-area: a;
-}
-.description {
-    grid-area: d;
-}
-.avatar img {
-    width: 100px;
-}
+
 .posts {
     grid-area: p;
 }

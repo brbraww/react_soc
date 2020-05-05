@@ -1,0 +1,22 @@
+.top {
+    grid-area: t;
+}
+.top img {
+    width: 100%;
+}
+
+.user_info {
+    grid-area: u;
+    display: grid;
+    grid-template-rows: 5fr 1fr;
+    grid-template-columns: 2fr 5fr;
+    grid-gap: 5px;
+    padding: 2%;
+}
+.user_info .avatar {
+}
+.user_info .description {
+}
+.user_info .avatar img {
+    width: 100px;
+}

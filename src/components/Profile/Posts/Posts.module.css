@@ -1,3 +1,6 @@
+.all {
+    padding: 2%;
+}
 .posts {
     grid-area: p;
 }

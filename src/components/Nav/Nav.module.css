@@ -3,7 +3,7 @@
     background-color: #000;
 }
 
-a {
+.nav a {
     display: inline-block;
     text-decoration: none;
     text-transform: uppercase;
@@ -17,7 +17,7 @@ a {
 
 
 }
-a {
+.nav a {
     color: #E7E5DD;
     background: url(https://html5book.ru/wp-content/uploads/2015/01/borger-grey.png) repeat-x;
     border-bottom: 1px solid  #bfc1ad;
@@ -25,6 +25,6 @@ a {
     border-right:  1px solid  #bfc1ad;
 }
 
-a.active_link {
+.nav a.active_link {
     color: gold;
 }

@@ -1,2 +1,29 @@
 .dialogs {
+    display: grid;
+    grid-template-columns: 4fr 10fr;
+}
+
+.dialog_items a {
+    text-decoration: none;
+    color: black;
+}
+.dialog a:hover {
+    color: white;
+    background: #000;
+}
+.dialog a{
+    padding: 10px;
+    display: block;
+
+}
+.dialog_items .active {
+    color: gold;
+}
+
+.messages {
+}
+
+.message {
+    padding: 10px;
+    color: black;
 }
