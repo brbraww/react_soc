@@ -11,23 +11,24 @@ import Bookmarks from "./components/Bookmarks/Bookmarks";
 import {BrowserRouter, Route} from "react-router-dom";
 
 
-function App() {
-  return (
-      <BrowserRouter>
-          <div className='app-wrapper'>
-              <Header/>
-              <Nav/>
-              <div className='app-wrapper-content'>
-                  <Route path='/dialogs' component={Dialogs}/>
-                  <Route path='/profile' component={Profile}/>
-                  <Route path='/news' component={News}/>
-                  <Route path='/settings' component={Settings}/>
-                  <Route path='/bookmarks' component={Bookmarks}/>
-                  <Route path='/music' component={Music}/>
-              </div>
-          </div>
-      </BrowserRouter>
-  );
+function App(props) {
+
+    return (
+        <BrowserRouter>
+            <div className='app-wrapper'>
+                <Header/>
+                <Nav/>
+                <div className='app-wrapper-content'>
+                    <Route path='/dialogs' render={() => <Dialogs DialogsData={props.DialogsData} MessagesData={props.MessagesData}/>}/>
+                    <Route path='/profile' render={() => <Profile PostsData={props.PostsData}/>}/>
+                    <Route path='/news' render={() => <News />}/>
+                    <Route path='/settings' render={() => <Settings />}/>
+                    <Route path='/bookmarks' render={() => <Bookmarks />}/>
+                    <Route path='/music' render={() => <Music />}/>
+                </div>
+            </div>
+        </BrowserRouter>
+    );
 }
 
 export default App;

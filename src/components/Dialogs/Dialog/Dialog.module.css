@@ -1,0 +1,10 @@
+.dialog a{
+    padding: 10px;
+    display: block;
+    text-decoration: none;
+    color: black;
+}
+.dialog a:hover {
+    color: white;
+    background: #000;
+}
