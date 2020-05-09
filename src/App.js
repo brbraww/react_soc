@@ -24,7 +24,9 @@ function App(props) {
                                state={props.state.DialogsPage}/>}/>
                     <Route path='/profile'
                            render={() => <Profile
-                               state={props.state.ProfilePage}/>}/>
+                               state={props.state.ProfilePage}
+                               addPost={props.addPost}
+                               updateNewPostText={props.updateNewPostText}/>}/>
                     <Route path='/news' render={() => <News />}/>
                     <Route path='/settings' render={() => <Settings />}/>
                     <Route path='/bookmarks' render={() => <Bookmarks />}/>

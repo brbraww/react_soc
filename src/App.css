@@ -3,7 +3,6 @@ body {
 }
 .app-wrapper {
   display: grid;
-  width: auto;
   grid-template-areas:
   'h h'
   'n c';
