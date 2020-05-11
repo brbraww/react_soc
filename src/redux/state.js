@@ -1,7 +1,6 @@
-const ADD_POST = 'ADD-POST';
-const UPDATE_NEW_POST_TEXT = 'UPDATE-NEW-POST-TEXT';
-const UPDATE_NEW_MESSAGE_TEXT = 'UPDATE-NEW-MESSSAGE-TEXT';
-const SEND_MESSAGE = 'SEND-MESSSAGE';
+import ProfileReducer from "./Profile-reducer";
+import DialogsReducer from "./Dialogs-reducer";
+import SidebarReducer from "./Sidebar-reducer";
 
 let store = {
     _state : {
@@ -44,49 +43,13 @@ let store = {
     },
 
     dispatch(action) {
-        if (action.type === ADD_POST) {
-            let NewPost = {
-                id: 3,
-                text: this._state.ProfilePage.NewPostText,
-                likesCount: 0,
-            };
-            this._state.ProfilePage.PostsData.push(NewPost);
-            this._state.ProfilePage.NewPostText = '';
-            this._callSubscriber(this._state);
-        }
-        else if (action.type === UPDATE_NEW_POST_TEXT) {
-            this._state.ProfilePage.NewPostText = action.newText;
-            this._callSubscriber(this._state);
-        }
-        else if (action.type === UPDATE_NEW_MESSAGE_TEXT) {
-            this._state.DialogsPage.newMessageText = action.messageText;
-            this._callSubscriber(this._state);
-        }
-        else if (action.type === SEND_MESSAGE) {
-            let messageText = this._state.DialogsPage.newMessageText;
-            this._state.DialogsPage.newMessageText = '';
-            this._state.DialogsPage.MessagesData.push({id:2, chatId: 1, text: messageText});
-            this._callSubscriber(this._state);
-        }
+        this._state.ProfilePage = ProfileReducer(this._state.ProfilePage, action);
+        this._state.DialogsPage = DialogsReducer(this._state.DialogsPage, action);
+        this._state.sidebar = SidebarReducer(this._state.DialogsPage, action);
+
+        this._callSubscriber(this._state);
     },
 }
-
-export const addPostActionCreator = () => ({
-    type: ADD_POST,
-})
-export const updateNewPostTextActionCreator = (newText) => ({
-    type: UPDATE_NEW_POST_TEXT,
-    newText: newText,
-})
-export const sendMessageCreator = () => ({
-    type: SEND_MESSAGE,
-})
-export const updateNewMessageTextCreator = (messageText) => ({
-    type: UPDATE_NEW_MESSAGE_TEXT,
-    messageText: messageText,
-
-})
-
 
 window.store = store;
 
