@@ -7,31 +7,27 @@ import Music from "./components/Music/Music";
 import Settings from "./components/Settings/Settings";
 import News from "./components/News/News";
 import Bookmarks from "./components/Bookmarks/Bookmarks";
-import {BrowserRouter, Route} from "react-router-dom";
+import {Route} from "react-router-dom";
 import DialogsContainer from "./components/Dialogs/DialogsContainer";
 
 
 function App(props) {
 
     return (
-        <BrowserRouter>
-            <div className='app-wrapper'>
-                <Header/>
-                <Nav/>
-                <div className='app-wrapper-content'>
-                    <Route path='/dialogs'
-                           render={() => <DialogsContainer
-                               store={props.store}/>}/>
-                    <Route path='/profile'
-                           render={() => <Profile
-                               store={props.store}/>}/>
-                    <Route path='/news' render={() => <News />}/>
-                    <Route path='/settings' render={() => <Settings />}/>
-                    <Route path='/bookmarks' render={() => <Bookmarks />}/>
-                    <Route path='/music' render={() => <Music />}/>
-                </div>
+        <div className='app-wrapper'>
+            <Header/>
+            <Nav/>
+            <div className='app-wrapper-content'>
+                <Route path='/dialogs'
+                       render={() => <DialogsContainer />}/>
+                <Route path='/profile'
+                       render={() => <Profile />}/>
+                <Route path='/news' render={() => <News />}/>
+                <Route path='/settings' render={() => <Settings />}/>
+                <Route path='/bookmarks' render={() => <Bookmarks />}/>
+                <Route path='/music' render={() => <Music />}/>
             </div>
-        </BrowserRouter>
+        </div>
     );
 }
 
