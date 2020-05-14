@@ -9,6 +9,7 @@ import News from "./components/News/News";
 import Bookmarks from "./components/Bookmarks/Bookmarks";
 import {Route} from "react-router-dom";
 import DialogsContainer from "./components/Dialogs/DialogsContainer";
+import UsersContainer from "./components/Users/Users-container";
 
 
 function App(props) {
@@ -19,9 +20,14 @@ function App(props) {
             <Nav/>
             <div className='app-wrapper-content'>
                 <Route path='/dialogs'
-                       render={() => <DialogsContainer />}/>
+                       render={() => <DialogsContainer />}
+                />
                 <Route path='/profile'
-                       render={() => <Profile />}/>
+                       render={() => <Profile />}
+                />
+                <Route path='/users'
+                       render={()=><UsersContainer /> }
+                />
                 <Route path='/news' render={() => <News />}/>
                 <Route path='/settings' render={() => <Settings />}/>
                 <Route path='/bookmarks' render={() => <Bookmarks />}/>
