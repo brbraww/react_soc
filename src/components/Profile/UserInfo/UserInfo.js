@@ -1,6 +1,7 @@
 import classes from "./UserInfo.module.css";
 import React from "react";
 import Preloader from "../../common/Preloader/Preloader";
+import userPhoto from "../../../assets/img/user.png";
 
 const UserInfo = (props) => {
     if (!props.profile) {
@@ -14,7 +15,7 @@ const UserInfo = (props) => {
             </div>
             <div className={ classes.user_info }>
                 <div className={ classes.avatar }>
-                    <img src={props.profile.photos.large} alt="avatar"/>
+                    <img src={props.profile.photos.large ? props.profile.photos.large:userPhoto} alt="avatar"/>
                 </div>
                 <div className={ classes.description }>
                     <div className={classes.fullName}>
@@ -24,36 +25,46 @@ const UserInfo = (props) => {
                         <p>{props.profile.aboutMe}</p>
                     </div>
                     <div className={classes.job}>
-
                         <p>{props.profile.lookingForAJob ? 'Ищу работу' : 'Не ищу работу' }</p>
                         <i>{props.profile.lookingForAJobDescription}</i>
                     </div>
                     <div className={classes.contacts}>
-                        <p>Контактная информация:</p>
-                        {props.profile.contacts.facebook
-                            ? <p><a href={templateUrl+props.profile.contacts.facebook}>facebook</a></p>
-                            : null
-                        }
-                        {props.profile.contacts.vk
-                            ? <p><a href={templateUrl+props.profile.contacts.vk}>vk</a></p>
-                            : null
-                        }
-                        {props.profile.contacts.instagram
-                            ? <p><a href={templateUrl+props.profile.contacts.instagram}>instagram</a></p>
-                            : null
-                        }
-                        {props.profile.contacts.github
-                            ? <p><a href={templateUrl+props.profile.contacts.github}>github</a></p>
-                            : null
-                        }
-                        {props.profile.contacts.youtube
-                            ? <p><a href={templateUrl+props.profile.contacts.youtube}>youtube</a></p>
-                            : null
-                        }
-                        {props.profile.contacts.tweeter
-                            ? <p><a href={templateUrl+props.profile.contacts.tweeter}>tweeter</a></p>
-                            : null
-                        }
+                        <div className={classes.contactItem}>
+                            {props.profile.contacts.facebook
+                                ? <p><a href={templateUrl+props.profile.contacts.facebook}>facebook</a></p>
+                                : null
+                            }
+                        </div>
+                        <div className={classes.contactItem}>
+                            {props.profile.contacts.vk
+                                ? <p><a href={templateUrl+props.profile.contacts.vk}>vk</a></p>
+                                : null
+                            }
+                        </div>
+                        <div className={classes.contactItem}>
+                            {props.profile.contacts.instagram
+                                ? <p><a href={templateUrl+props.profile.contacts.instagram}>instagram</a></p>
+                                : null
+                            }
+                        </div>
+                        <div className={classes.contactItem}>
+                            {props.profile.contacts.github
+                                ? <p><a href={templateUrl+props.profile.contacts.github}>github</a></p>
+                                : null
+                            }
+                        </div>
+                        <div className={classes.contactItem}>
+                            {props.profile.contacts.youtube
+                                ? <p><a href={templateUrl+props.profile.contacts.youtube}>youtube</a></p>
+                                : null
+                            }
+                        </div>
+                        <div className={classes.contactItem}>
+                            {props.profile.contacts.tweeter
+                                ? <p><a href={templateUrl+props.profile.contacts.tweeter}>tweeter</a></p>
+                                : null
+                            }
+                        </div>
                     </div>
                 </div>
             </div>
