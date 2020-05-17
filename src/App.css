@@ -6,7 +6,6 @@ body {
   grid-template-areas:
   'h h'
   'n c';
-
   grid-template-rows: auto;
   grid-template-columns: 1fr 10fr;
   grid-gap: 5px;
