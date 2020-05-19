@@ -30,8 +30,8 @@ let Users = (props) => {
                                     if (data.resultCode === 0) {
                                         props.unfollow(u.id);
                                     }
+                                    props.toggleIsFollowingInProgress(false,u.id);
                                 });
-                                props.toggleIsFollowingInProgress(false,u.id);
                             }}>Unfollow</button>
                             : <button disabled={props.isFollowingInProgress.some(id=>id === u.id)} onClick={() => {
                                 props.toggleIsFollowingInProgress(true,u.id);
@@ -39,8 +39,8 @@ let Users = (props) => {
                                     if (data.resultCode === 0) {
                                         props.follow(u.id);
                                     }
+                                    props.toggleIsFollowingInProgress(false,u.id);
                                 });
-                                props.toggleIsFollowingInProgress(false,u.id);
                             }}>Follow</button>
                         }
                     </div>
