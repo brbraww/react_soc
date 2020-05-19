@@ -2,7 +2,6 @@ import React from "react";
 import userPhoto from "../../assets/img/user.png";
 import classes from "./Users.module.css";
 import {NavLink} from "react-router-dom";
-import {usersAPI} from "../../api/api";
 
 
 let Users = (props) => {
@@ -24,24 +23,12 @@ let Users = (props) => {
                     </div>
                     <div>
                         {u.followed
-                            ? <button disabled={props.isFollowingInProgress.some(id=>id === u.id)} onClick={() => {
-                                props.toggleIsFollowingInProgress(true,u.id);
-                                usersAPI.unfollow(u.id).then(data => {
-                                    if (data.resultCode === 0) {
-                                        props.unfollow(u.id);
-                                    }
-                                    props.toggleIsFollowingInProgress(false,u.id);
-                                });
-                            }}>Unfollow</button>
-                            : <button disabled={props.isFollowingInProgress.some(id=>id === u.id)} onClick={() => {
-                                props.toggleIsFollowingInProgress(true,u.id);
-                                usersAPI.follow(u.id).then(data => {
-                                    if (data.resultCode === 0) {
-                                        props.follow(u.id);
-                                    }
-                                    props.toggleIsFollowingInProgress(false,u.id);
-                                });
-                            }}>Follow</button>
+                            ? <button disabled={props.isFollowingInProgress.some(id=>id === u.id)}
+                                      onClick={() => {props.unfollow(u.id);}}>
+                                Unfollow</button>
+                            : <button disabled={props.isFollowingInProgress.some(id=>id === u.id)}
+                                      onClick={() => {props.follow(u.id);}}>
+                                Follow</button>
                         }
                     </div>
                 </span>

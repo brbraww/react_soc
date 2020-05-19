@@ -1,35 +1,22 @@
 import {connect} from "react-redux";
 import {
-    follow,
+    follow, getUsers,
     setCurrentPage,
-    setTotalUsersCount,
-    setUsers,
-    toggleIsFetching, toggleIsFollowingInProgress,
+    toggleIsFollowingInProgress,
     unfollow
 } from "../../redux/Users-reducer";
 import React from "react";
 import Users from "./Users";
 import Preloader from "../common/Preloader/Preloader";
-import {usersAPI} from "../../api/api";
 
 
 class UsersCont extends React.Component {
     componentDidMount() {
-        this.props.toggleIsFetching(true);
-        usersAPI.getUsers(this.props.currentPage, this.props.pageSize).then(data => {
-            this.props.toggleIsFetching(false);
-            this.props.setUsers(data.items);
-            this.props.setTotalUsersCount(data.totalCount);
-        });
+        this.props.getUsers(this.props.currentPage, this.props.pageSize);
     }
 
     onPageChanged = (currentPage) => {
-        this.props.toggleIsFetching(true);
-        this.props.setCurrentPage(currentPage)
-        usersAPI.getUsers(currentPage, this.props.pageSize).then(data => {
-            this.props.toggleIsFetching(false);
-            this.props.setUsers(data.items)
-        });
+        this.props.getUsers(currentPage, this.props.pageSize);
     }
 
     render() {
@@ -42,7 +29,6 @@ class UsersCont extends React.Component {
                    onPageChanged={this.onPageChanged}
                    follow={this.props.follow}
                    unfollow={this.props.unfollow}
-                   toggleIsFollowingInProgress={this.props.toggleIsFollowingInProgress}
                    isFollowingInProgress={this.props.isFollowingInProgress}
             />
         </>
@@ -61,9 +47,8 @@ let mapStateToProps = (state) => {
 }
 
 const UsersContainer = connect(mapStateToProps,
-    {follow, unfollow, setUsers,
-        setCurrentPage, setTotalUsersCount, toggleIsFetching,
-        toggleIsFollowingInProgress
+    {follow, unfollow, setCurrentPage,
+        toggleIsFollowingInProgress, getUsers
     })(UsersCont);
 
 export default UsersContainer;
