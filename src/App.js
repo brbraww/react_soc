@@ -10,6 +10,7 @@ import DialogsContainer from "./components/Dialogs/DialogsContainer";
 import UsersContainer from "./components/Users/Users-container";
 import ProfileContainer from "./components/Profile/Profile-container";
 import HeaderContainer from "./components/Header/HeaderContainer";
+import Login from "./components/Login/Login";
 
 
 function App(props) {
@@ -32,6 +33,7 @@ function App(props) {
                 <Route path='/settings' render={() => <Settings />}/>
                 <Route path='/bookmarks' render={() => <Bookmarks />}/>
                 <Route path='/music' render={() => <Music />}/>
+                <Route path='/login' render={() => <Login />}/>
             </div>
         </div>
     );
