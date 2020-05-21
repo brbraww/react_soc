@@ -1,4 +1,3 @@
-const UPDATE_NEW_MESSAGE_TEXT = 'UPDATE-NEW-MESSSAGE-TEXT';
 const SEND_MESSAGE = 'SEND-MESSSAGE';
 
 let initialState = {
@@ -16,40 +15,28 @@ let initialState = {
         {id: 1, chatId: 4, text: 'Ya Moon'},
         {id: 1, chatId: 5, text: 'Ya Ogurchik'},
     ],
-    newMessageText: '',
 }
 
 const DialogsReducer = (state = initialState, action) => {
     switch (action.type) {
-        case UPDATE_NEW_MESSAGE_TEXT:
-            return {
-                ...state,
-                newMessageText: action.messageText,
-            };
-
         case SEND_MESSAGE:
             let message = {
                 id: 2,
                 chatId: 1,
-                text: state.newMessageText,
+                text: action.newMessageText,
             };
             return {
                 ...state,
                 MessagesData: [...state.MessagesData, message],
-                newMessageText: '',
             };
         default:
             return state;
     }
 }
 
-export const sendMessageCreator = () => ({
+export const sendMessageCreator = (newMessageText) => ({
     type: SEND_MESSAGE,
-})
-export const updateNewMessageTextCreator = (messageText) => ({
-    type: UPDATE_NEW_MESSAGE_TEXT,
-    messageText: messageText,
-
+    newMessageText,
 })
 
 export default DialogsReducer;
