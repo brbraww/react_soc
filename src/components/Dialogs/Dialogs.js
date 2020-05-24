@@ -3,7 +3,7 @@ import classes from './Dialogs.module.css';
 import Dialog from "./Dialog/Dialog";
 import Message from "./Message/Message";
 import {Redirect} from "react-router-dom";
-import {Field, reduxForm} from "redux-form";
+import {Field, reduxForm, reset} from "redux-form";
 import {Textarea} from "../common/FormsControls/FormsControls";
 import {maxLenghtCreator, requiredField} from "../../utils/validators/validators";
 
@@ -53,6 +53,8 @@ const AddMessageForm = (props) => {
         </form>
     )
 }
-const AddMessageFormRedux = reduxForm({form: 'dialogAddMessageForm'})(AddMessageForm)
+const afterSubmit = (result, dispatch) =>
+    dispatch(reset('dialogAddMessageForm'));
+const AddMessageFormRedux = reduxForm({form: 'dialogAddMessageForm',onSubmitSuccess:afterSubmit})(AddMessageForm)
 
 export default Dialogs;

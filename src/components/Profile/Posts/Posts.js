@@ -1,7 +1,7 @@
 import React from "react";
 import classes from './Posts.module.css'
 import Post from "./Post/Post";
-import {Field, reduxForm} from "redux-form";
+import {Field, reduxForm, reset} from "redux-form";
 import {maxLenghtCreator, requiredField} from "../../../utils/validators/validators";
 import {Textarea} from "../../common/FormsControls/FormsControls";
 
@@ -57,6 +57,8 @@ const AddNewPostForm = (props) => {
         )
     }
 }*/
-const AddPostFormRedux = reduxForm({form:'postsAddNewPostForm'})(AddNewPostForm)
+const afterSubmit = (result, dispatch) =>
+    dispatch(reset('postsAddNewPostForm'));
+const AddPostFormRedux = reduxForm({form:'postsAddNewPostForm', onSubmitSuccess: afterSubmit})(AddNewPostForm)
 
 export default Posts;
