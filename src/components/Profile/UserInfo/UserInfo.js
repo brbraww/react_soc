@@ -2,7 +2,8 @@ import classes from "./UserInfo.module.css";
 import React from "react";
 import Preloader from "../../common/Preloader/Preloader";
 import userPhoto from "../../../assets/img/user.png";
-import UserStatus from "./UserStatus/UserStatus";
+//import UserStatus from "./UserStatus/UserStatus";
+import UserStatusWithHooks from "./UserStatus/UserStatusWithHooks";
 
 const UserInfo = (props) => {
     if (!props.profile) {
@@ -22,7 +23,7 @@ const UserInfo = (props) => {
                     <div className={classes.fullName}>
                         <h2>{props.profile.fullName}</h2>
                     </div>
-                    <UserStatus status={props.status} updateStatus={props.updateStatus} />
+                    <UserStatusWithHooks status={props.status} updateStatus={props.updateStatus} />
                     <div className={classes.job}>
                         <p>{props.profile.lookingForAJob ? 'Ищу работу' : 'Не ищу работу' }</p>
                         <i>{props.profile.lookingForAJobDescription}</i>
