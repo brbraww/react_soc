@@ -2,7 +2,6 @@ import classes from "./UserInfo.module.css";
 import React from "react";
 import Preloader from "../../common/Preloader/Preloader";
 import userPhoto from "../../../assets/img/user.png";
-//import UserStatus from "./UserStatus/UserStatus";
 import UserStatusWithHooks from "./UserStatus/UserStatusWithHooks";
 
 const UserInfo = (props) => {

@@ -1,0 +1,6 @@
+.pages span{
+    margin: 5px;
+}
+.selectedPage {
+    font-weight: 600;
+}
