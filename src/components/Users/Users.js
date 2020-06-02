@@ -3,7 +3,7 @@ import Paginator from "../common/Paginator/paginator";
 import User from "./User/User";
 
 
-let Users = ({currentPage,onPageChanged,totalUsersCount,pageSize,UsersData,...props}) => {
+let Users = ({currentPage,onPageChanged,totalUsersCount,pageSize,UsersData,portionSize,...props}) => {
     return <div>
         {
             UsersData.map(u => <User user={u}
@@ -16,8 +16,9 @@ let Users = ({currentPage,onPageChanged,totalUsersCount,pageSize,UsersData,...pr
         <Paginator
             currentPage={currentPage}
             onPageChanged={onPageChanged}
-            totalUsersCount={totalUsersCount}
+            totalItemsCount={totalUsersCount}
             pageSize={pageSize}
+            portionSize={portionSize}
         />
     </div>
 }

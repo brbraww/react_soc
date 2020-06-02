@@ -1,6 +1,22 @@
+.pages {
+    text-align: center;
+    margin: 10px;
+}
 .pages span{
-    margin: 5px;
+    padding: 5px;
+    margin: 1px;
+    border: 1px solid black;
+    cursor: pointer;
+}
+.pages span:hover{
+    background-color: #000;
+    color:deepskyblue;
 }
 .selectedPage {
-    font-weight: 600;
+    font-weight: 700;
+    background-color: #000;
+    color: deepskyblue;
+}
+.span{
+    border: 1px solid black;
 }

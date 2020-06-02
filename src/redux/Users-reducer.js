@@ -16,6 +16,7 @@ let initialState = {
     currentPage: 1,
     isFetching: true,
     isFollowingInProgress: [],
+    portionSize: 10,
 }
 
 const UsersReducer = (state = initialState, action) => {
