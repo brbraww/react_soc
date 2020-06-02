@@ -8,14 +8,14 @@
     border: 1px solid black;
     cursor: pointer;
 }
-.pages span:hover{
+.pages .anotherPage:hover{
     background-color: #000;
     color:deepskyblue;
 }
 .selectedPage {
     font-weight: 700;
     background-color: #000;
-    color: deepskyblue;
+    color: gold;
 }
 .span{
     border: 1px solid black;
