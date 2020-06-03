@@ -3,15 +3,15 @@
     "static/js/0.5036ba16.chunk.js": "/react_soc/static/js/0.5036ba16.chunk.js",
     "static/js/0.5036ba16.chunk.js.map": "/react_soc/static/js/0.5036ba16.chunk.js.map",
     "main.css": "/react_soc/static/css/main.033c0da1.chunk.css",
-    "main.js": "/react_soc/static/js/main.63b2c7d7.chunk.js",
-    "main.js.map": "/react_soc/static/js/main.63b2c7d7.chunk.js.map",
-    "runtime-main.js": "/react_soc/static/js/runtime-main.cd1a175c.js",
-    "runtime-main.js.map": "/react_soc/static/js/runtime-main.cd1a175c.js.map",
+    "main.js": "/react_soc/static/js/main.50f0ccbb.chunk.js",
+    "main.js.map": "/react_soc/static/js/main.50f0ccbb.chunk.js.map",
+    "runtime-main.js": "/react_soc/static/js/runtime-main.57b1e24e.js",
+    "runtime-main.js.map": "/react_soc/static/js/runtime-main.57b1e24e.js.map",
     "static/js/3.24193fa1.chunk.js": "/react_soc/static/js/3.24193fa1.chunk.js",
     "static/js/3.24193fa1.chunk.js.map": "/react_soc/static/js/3.24193fa1.chunk.js.map",
     "static/css/4.3bc29740.chunk.css": "/react_soc/static/css/4.3bc29740.chunk.css",
-    "static/js/4.f7208b21.chunk.js": "/react_soc/static/js/4.f7208b21.chunk.js",
-    "static/js/4.f7208b21.chunk.js.map": "/react_soc/static/js/4.f7208b21.chunk.js.map",
+    "static/js/4.e96440e2.chunk.js": "/react_soc/static/js/4.e96440e2.chunk.js",
+    "static/js/4.e96440e2.chunk.js.map": "/react_soc/static/js/4.e96440e2.chunk.js.map",
     "static/css/5.7728e18c.chunk.css": "/react_soc/static/css/5.7728e18c.chunk.css",
     "static/js/5.5feee2fe.chunk.js": "/react_soc/static/js/5.5feee2fe.chunk.js",
     "static/js/5.5feee2fe.chunk.js.map": "/react_soc/static/js/5.5feee2fe.chunk.js.map",
@@ -22,7 +22,7 @@
     "static/js/7.0e0bfb54.chunk.js": "/react_soc/static/js/7.0e0bfb54.chunk.js",
     "static/js/7.0e0bfb54.chunk.js.map": "/react_soc/static/js/7.0e0bfb54.chunk.js.map",
     "index.html": "/react_soc/index.html",
-    "precache-manifest.b2d1f1fced7c50f8c99611229a5c87ad.js": "/react_soc/precache-manifest.b2d1f1fced7c50f8c99611229a5c87ad.js",
+    "precache-manifest.d74309da2afc2bc0f8459caf98baddf6.js": "/react_soc/precache-manifest.d74309da2afc2bc0f8459caf98baddf6.js",
     "service-worker.js": "/react_soc/service-worker.js",
     "static/css/4.3bc29740.chunk.css.map": "/react_soc/static/css/4.3bc29740.chunk.css.map",
     "static/css/5.7728e18c.chunk.css.map": "/react_soc/static/css/5.7728e18c.chunk.css.map",
@@ -33,9 +33,9 @@
     "static/media/Spinner.svg": "/react_soc/static/media/Spinner.fb0de157.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.cd1a175c.js",
+    "static/js/runtime-main.57b1e24e.js",
     "static/js/3.24193fa1.chunk.js",
     "static/css/main.033c0da1.chunk.css",
-    "static/js/main.63b2c7d7.chunk.js"
+    "static/js/main.50f0ccbb.chunk.js"
   ]
 }
