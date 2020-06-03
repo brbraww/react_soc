@@ -12,3 +12,15 @@
 .user_info .avatar img {
     width: 250px;
 }
+.contactItem {
+    padding-left: 20px;
+}
+.title {
+    font-weight: 600;
+}
+.error
+{
+    border: red 2px solid;
+    padding: 5px;
+    color: mediumvioletred;
+}

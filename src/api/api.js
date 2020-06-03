@@ -41,6 +41,10 @@ export const profileAPI = {
                 {headers:{'Content-Type': 'multipart/form-data'}}
             )
     },
+    saveUserInfo(userInfo) {
+        return instance.put(`profile`, userInfo)
+
+    },
 }
 export const authAPI = {
     authMe () {
